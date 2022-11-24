@@ -1,6 +1,6 @@
 {
-  "name": "biffbangpow/silverstripe-elementmodule-template",
-  "description": "A basic skeleton for a Silverstripe 4 elemental module",
+  "name": "biffbangpow/silverstripe-team-element",
+  "description": "A 'Team members' element for Silverstripe",
   "type": "silverstripe-vendormodule",
   "minimum-stability": "dev",
   "license": "proprietary",
@@ -18,7 +18,8 @@
     "silverstripe/vendor-plugin": "^1.0",
     "silverstripe/cms": "^4",
     "dnadesign/silverstripe-elemental": "^4@stable || ^3@stable",
-    "biffbangpow/silverstripe-element-spacing": "^1"
+    "biffbangpow/silverstripe-element-spacing": "^1",
+    "biffbangpow/silverstripe-sortable-extension": "^2"
   },
   "autoload": {
     "psr-4": {
@@ -26,5 +27,8 @@
     }
   },
   "extra": {
+    "expose": [
+      "client/dist"
+    ]
   }
 }
