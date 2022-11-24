@@ -10,7 +10,7 @@ const TeamElement = class {
     }
 
     initDialogActions() {
-        document.querySelectorAll('.team-element .team-member.has-bio').forEach((teamElem) => {
+        document.querySelectorAll('.bbp-team-element .team-member.has-bio').forEach((teamElem) => {
             teamElem.addEventListener('click', () => {
                 this.showTeamBio(teamElem);
             });
@@ -18,7 +18,7 @@ const TeamElement = class {
     }
 
     initModalClosers() {
-        document.querySelectorAll('.team-element .team-modal-closer').forEach((closerElem) => {
+        document.querySelectorAll('.bbp-team-element .team-modal-closer').forEach((closerElem) => {
             closerElem.addEventListener('click', () => {
                 this.teamModal.close();
                 this.teamModalImgHolder.innerHTML = '';
