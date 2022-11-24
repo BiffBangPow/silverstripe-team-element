@@ -10,6 +10,10 @@ class TeamElement extends BaseElement
 {
     private static $table_name = 'Element_Team';
 
+    private static $db = [
+        'Content' => 'HTMLText'
+    ];
+
     private static $many_many = [
         'TeamMembers' => TeamMember::class
     ];

@@ -6,6 +6,7 @@ use BiffBangPow\Element\TeamElement;
 use BiffBangPow\Extension\SortableExtension;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Assets\Image;
+use SilverStripe\Core\Extensible;
 use SilverStripe\ORM\DataObject;
 use SilverStripe\ORM\FieldType\DBHTMLText;
 use SilverStripe\ORM\FieldType\DBVarchar;
@@ -21,6 +22,7 @@ use SilverStripe\ORM\FieldType\DBVarchar;
  */
 class TeamMember extends DataObject
 {
+
     private static $table_name = 'TeamMember';
     private static $db = [
         'Name' => 'Varchar',
@@ -50,6 +52,7 @@ class TeamMember extends DataObject
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();
+        $fields->removeByName(['Element']);
         $fields->addFieldsToTab('Root.Main', [
             UploadField::create('Image')
                 ->setAllowedFileCategories('image/supported')
@@ -65,7 +68,19 @@ class TeamMember extends DataObject
      */
     public function getTitle() :string
     {
-        return $this->Name . ", " . $this->JobTitle;
+        $title = $this->Name . ", " . $this->JobTitle;
+        $this->extend('updateTeamTitle', $title);
+        return $title;
+    }
+
+    /**
+     * Gets the phone number for the team member
+     * @return DBVarchar
+     */
+    public function getTeamMemberPhone() {
+        $phone = $this->Phone;
+        $this->extend('updatePhoneNumber', $phone);
+        return $phone;
     }
 }
 
