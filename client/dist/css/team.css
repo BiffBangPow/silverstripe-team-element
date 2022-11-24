@@ -1,1 +1,8 @@
-.bbp-team-element dialog{width:75%;border:none}.bbp-team-element dialog::backdrop{background:rgba(0,0,0,.7)}
+.bbp-team-element dialog {
+  width: 75%;
+  border: none;
+}
+.bbp-team-element dialog::backdrop {
+  background: rgba(0, 0, 0, 0.7);
+}
+/*# sourceMappingURL=../../dist/css/maps/team.css.map */
