@@ -25,7 +25,7 @@ class TeamElement extends BaseElement
 
     public function getSimpleClassName()
     {
-        return 'team-element';
+        return 'bbp-team-element';
     }
 
     public function getCMSFields()
