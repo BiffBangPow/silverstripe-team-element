@@ -6,6 +6,12 @@ const TeamElement = class {
         if (bioImg !== null) {
             this.teamModalImgHolder.innerHTML = bioImg.innerHTML;
         }
+
+        let bioContent = elem.querySelector(':scope .team-member-content');
+        this.teamModalContentHolder.innerHTML = bioContent.innerHTML;
+        this.teamModalContentHolder.querySelector(':scope .team-member-bio').classList.remove('visually-hidden');
+        this.teamModalContentHolder.querySelector(':scope .read-more').classList.add('visually-hidden');
+
         this.teamModal.showModal();
     }
 
@@ -22,6 +28,7 @@ const TeamElement = class {
             closerElem.addEventListener('click', () => {
                 this.teamModal.close();
                 this.teamModalImgHolder.innerHTML = '';
+                this.teamModalContentHolder.innerHTML = '';
             });
         });
     }
