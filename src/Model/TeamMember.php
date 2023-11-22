@@ -27,6 +27,7 @@ class TeamMember extends DataObject
     private static $db = [
         'Name' => 'Varchar',
         'JobTitle' => 'Varchar',
+        'Summary' => 'HTMLText',
         'Bio' => 'HTMLText',
         'LinkedIn' => 'Varchar',
         'Email' => 'Varchar',
