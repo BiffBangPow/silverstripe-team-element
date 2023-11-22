@@ -2,6 +2,7 @@
 
 namespace BiffBangPow\Element;
 
+use BiffBangPow\Element\Control\TeamElementController;
 use BiffBangPow\Element\Model\TeamMember;
 use DNADesign\Elemental\Models\BaseElement;
 use SilverStripe\Forms\CheckboxSetField;
@@ -11,6 +12,9 @@ use SilverStripe\Forms\HeaderField;
 class TeamElement extends BaseElement
 {
     private static $table_name = 'Element_Team';
+    private static $controller_class = TeamElementController::class;
+    private static $include_default_js = true;
+    private static $include_default_css = true;
 
     private static $db = [
         'Content' => 'HTMLText',
