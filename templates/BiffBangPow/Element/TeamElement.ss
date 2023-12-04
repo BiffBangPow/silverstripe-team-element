@@ -37,8 +37,8 @@
                     <div class="team-links mb-4">
                         <% if $LinkedIn %>
                             <a class="team-contact-link me-1 team-icon d-inline-flex justify-content-center align-items-center" href="$LinkedIn" target="_blank" rel="noopener" title="<%t Team.LinkTo 'Link to' %> LinkedIn">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" aria-labelledby="title">
-                                    <title id="title"><%t Team.LinkedInIcon 'Linked In Icon' %></title>
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" aria-labelledby="linkedin-title-$ID">
+                                    <title id="linkedin-title-$ID"><%t Team.LinkedInIcon 'Linked In Icon' %></title>
                                     <style>svg {
                                         fill: #000000
                                     }</style>
@@ -49,8 +49,8 @@
                         <% end_if %>
                         <% if $Email %>
                             <a class="team-contact-link me-1 team-icon d-inline-flex justify-content-center align-items-center" href="mailto:$Email" title="<%t Team.EmailLink 'Link to send an email to' %> $Email">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" aria-labelledby="title">
-                                    <title id="title"><%t Team.EmailIcon 'Email Icon' %></title>
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" aria-labelledby="email-title-$ID">
+                                    <title id="email-title-$ID"><%t Team.EmailIcon 'Email Icon' %></title>
                                     <style>svg {
                                         fill: #000000
                                     }</style>
@@ -62,8 +62,8 @@
                         <% if $TeamMemberPhone %>
                             <span class="team-phone">
                                 <span class="team-icon d-inline-flex justify-content-center align-items-center me-1">
-                         <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" aria-labelledby="title">
-                             <title id="title"><%t Team.PhoneIcon 'Telephone Icon' %></title>
+                         <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" aria-labelledby="phone-title-$ID">
+                             <title id="phone-title-$ID"><%t Team.PhoneIcon 'Telephone Icon' %></title>
                              <style>svg {
                              fill: #000000
                          }</style><path
