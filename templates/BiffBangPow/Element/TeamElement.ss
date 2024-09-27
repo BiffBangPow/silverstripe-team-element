@@ -25,7 +25,7 @@
                         <picture>
                             <% with $Image.Fill(511,653) %>
                                 <source type="image/webp" srcset="$Format('webp').URL">
-                                <img alt="$Up.Up.Title" class="lazyload img-fluid" data-src="$URL" src="" loading="lazy"
+                                <img alt="$Up.Up.Title" class="lazyload img-fluid" src="$URL" loading="lazy"
                                      width="$Width" height="$Height">
                             <% end_with %>
                         </picture>
