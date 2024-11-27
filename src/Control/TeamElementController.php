@@ -14,7 +14,6 @@ class TeamElementController extends ElementController
         parent::init();
         if (TeamElement::config()->get('include_default_js') === true) {
             Requirements::javascript('biffbangpow/silverstripe-team-element:client/dist/javascript/teamelement.js', [
-                'async' => true,
                 'defer' => true,
                 'type' => false
             ]);
